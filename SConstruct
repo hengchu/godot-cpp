@@ -89,7 +89,7 @@ elif env['platform'] == 'osx':
     env.Append(LINKFLAGS=['-arch', 'x86_64', '-framework', 'Cocoa', '-Wl,-undefined,dynamic_lookup'])
 
     if env['target'] == 'debug':
-        env.Append(CCFLAGS=['-Og'])
+        env.Append(CCFLAGS=['-O0'])
     elif env['target'] == 'release':
         env.Append(CCFLAGS=['-O3'])
 
